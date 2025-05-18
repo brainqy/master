@@ -1,0 +1,11 @@
+package com.brainqy.master.entities;
+
+/**
+ * Description of the class or file.
+ *
+ * @author Dnyaneshwar Somwanshi
+ * @version 1.0
+ * @project master
+ * @since 17-05-2025
+ */
+public enum SupportArea { MENTORING_STUDENTS, PROVIDING_INTERNSHIP_OPPORTUNITIES, SHARING_JOB_REFERRALS, GUEST_LECTURING, STARTUP_BUSINESS_MENTORSHIP, SPONSORSHIP_OR_DONATIONS, RELOCATION_HELP, CURRICULUM_FEEDBACK, ORGANIZING_ALUMNI_EVENTS, VOLUNTEERING_FOR_CAMPUS_ACTIVITIES }
