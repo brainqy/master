@@ -14,18 +14,16 @@ import java.util.Date;
  * @author Dnyaneshwar Somwanshi
  * @version 1.0
  * @project master
- * @since 18-05-2025
+ * @since 19-05-2025
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class CommunityCommentResponseDto {
-    private Long id;
-    private Long userId;
-    private String userName;
-    private String userAvatar;
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX")
-    private Date timestamp;
-    private String text;
+class AffiliateSignupResponseDto {
+    private Long newUserId; // Masked or partial if needed for privacy
+    private String newUserName; // Masked or partial
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    private Date signupDate;
+    private Double commissionEarned;
 }

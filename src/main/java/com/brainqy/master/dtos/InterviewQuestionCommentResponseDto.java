@@ -20,11 +20,16 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-class InterviewQuestionCommentResponseDto {
-    private Long id;
-    private Long userId;
-    private String userName;
-    private String text;
+public class InterviewQuestionCommentResponseDto {
+
+    private Long id; // The ID of the comment itself
+
+    private Long userId; // ID of the user who made the comment
+    private String userName; // Name of the user
+    // private String userAvatarUrl; // Optional: URL of the user's avatar
+
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX")
     private Date timestamp;
+
+    private String text; // The content of the comment
 }

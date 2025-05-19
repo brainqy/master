@@ -1,8 +1,11 @@
 package com.brainqy.master.repos;
 
 import com.brainqy.master.entities.JobApplication;
+import com.brainqy.master.entities.JobApplicationStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * Description of the class or file.
@@ -14,4 +17,6 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface JobApplicationRepository extends JpaRepository<JobApplication,Long> {
+    List<JobApplication> findByUserIdOrderByDateAppliedDesc(Long userId);
+    List<JobApplication> findByUserIdAndStatus(Long userId, JobApplicationStatus status);
 }

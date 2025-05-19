@@ -1,6 +1,7 @@
 package com.brainqy.master.entities;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.Date;
 
@@ -15,7 +16,8 @@ import java.util.Date;
 
 @Entity
 @Table(name = "community_comments")
-class CommunityComment {
+@Data
+public class CommunityComment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) private Long id;
     @ManyToOne @JoinColumn(name="user_id") private User user;

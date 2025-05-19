@@ -14,18 +14,17 @@ import java.util.Date;
  * @author Dnyaneshwar Somwanshi
  * @version 1.0
  * @project master
- * @since 18-05-2025
+ * @since 19-05-2025
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class CommunityCommentResponseDto {
+class ReferralHistoryItemResponseDto {
     private Long id;
-    private Long userId;
-    private String userName;
-    private String userAvatar;
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX")
-    private Date timestamp;
-    private String text;
+    private String referredEmailOrName;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    private Date referralDate;
+    private String status; // From ReferralHistoryItem.ReferralStatus enum
+    private Integer rewardAmount;
 }

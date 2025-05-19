@@ -1,5 +1,6 @@
 package com.brainqy.master.dtos;
 
+import com.brainqy.master.entities.WalletTransaction;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,18 +15,17 @@ import java.util.Date;
  * @author Dnyaneshwar Somwanshi
  * @version 1.0
  * @project master
- * @since 18-05-2025
+ * @since 19-05-2025
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class CommunityCommentResponseDto {
+public class WalletTransactionResponseDto {
     private Long id;
-    private Long userId;
-    private String userName;
-    private String userAvatar;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX")
-    private Date timestamp;
-    private String text;
+    private Date transactionDate;
+    private String description;
+    private Integer amount;
+    private WalletTransaction.TransactionType type;
 }
