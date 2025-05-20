@@ -1,5 +1,7 @@
 package com.brainqy.master.services;
 
+import com.brainqy.master.dtos.CommunityCommentRequestDto;
+import com.brainqy.master.dtos.CommunityCommentResponseDto;
 /**
  * Description of the class or file.
  *
@@ -10,6 +12,8 @@ package com.brainqy.master.services;
  */
 import com.brainqy.master.dtos.CommunityPostRequestDto;
 import com.brainqy.master.dtos.CommunityPostResponseDto;
+import com.brainqy.master.entities.CommunityPost.PostType;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

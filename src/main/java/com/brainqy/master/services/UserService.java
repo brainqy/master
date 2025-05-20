@@ -2,8 +2,10 @@ package com.brainqy.master.services;
 
 import com.brainqy.master.dtos.UserProfileUpdateRequestDto;
 import com.brainqy.master.dtos.UserResponseDto;
+import com.brainqy.master.dtos.UserUpdateRequestDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Description of the class or file.
@@ -19,6 +21,10 @@ public interface UserService {
     UserResponseDto updateUserProfile(Long userId, UserProfileUpdateRequestDto profileUpdateDto);
     UserResponseDto adminUpdateUser(Long userId, UserProfileUpdateRequestDto userUpdateDto); // For admin/manager
     void deleteUser(Long userId);
+
+    @Transactional
+    UserResponseDto adminUpdateUser(Long userId, UserUpdateRequestDto userUpdateDto);
+
     void changePassword(Long userId, String currentPassword, String newPassword);
     void requestDataDeletion(Long userId);
     // Other user-specific methods
